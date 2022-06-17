@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+.meso {
+  font-family: "MuseoModerno", cursive;
+}
+.pop700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.pop500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
