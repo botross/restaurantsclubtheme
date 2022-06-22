@@ -1,77 +1,25 @@
 
 import './App.css';
 import React from 'react';
-import RestaurantsIcon from "./Assets/icon.png"
-import RestaurantsIcon2 from "./Assets/icon2.png"
+
+
 import HerImage from "./Assets/hero.png"
 import MotorCycleImage from "./Assets/MotorCycle.png"
 import AcademyImagae from "./Assets/Acadmy.png"
 import ChefImage from "./Assets/Chef.png"
-import { FaPhoneAlt } from "react-icons/fa"
-import { GiHamburgerMenu } from "react-icons/gi"
-import { BsPersonCircle } from "react-icons/bs"
+
+import Footer from './Components/Footer';
+import NavBar from './Components/NavBar';
 function App() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+
   return (
     <div className=" w-full flex flex-col gap-y-8">
       <div className='h-[50px] w-full bg-[#114653] items-center justify-center flex ' >
         <p className='text-white lg:text-xl sm:text-[10px] lg:tracking-wide pop500'>fino a 500€ al mese di credito pubblicitario in omaggio nell’abbonamento</p>
       </div>
 
-      <nav className=" flex flex-col duration-300 transition-all relative items-center lg:hidden justify-evenly  py-2 -mt-8">
 
-        <div className="w-full relative flex items-center justify-between px-4 ">
-
-          <button
-
-            type="button"
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            <GiHamburgerMenu size={30} color="#00B27A" />
-          </button>
-          <div className=' w-1/2'>
-            <img src={RestaurantsIcon} alt="logo" className='w-full h-full ' />
-          </div>
-          <BsPersonCircle size={30} color="#00B27A" />
-        </div>
-        <div
-          className={
-            "flex-grow flex-col mt-4 items-center  duration-300 transition-all" +
-            (navbarOpen ? " flex" : " hidden")
-          }
-        >
-          <ul className="flex flex-col gap-y-3">
-            <p className='pop500 '>Il prodotto</p>
-            <p className='pop500'>Prezzi</p>
-            <p className='pop500'>Risorse</p>
-          </ul>
-        </div>
-
-      </nav>
-
-      <div className='flex flex-row justify-around items-center px-8 -mt-6 sm:hidden' >
-        <div className='flex flex-row items-center gap-x-4 w-1/3 mr-8'>
-          <p className='pop500'>Il prodotto</p>
-          <p className='pop500'>Prezzi</p>
-          <p className='pop500'>Risorse</p>
-        </div>
-        <div className=' w-1/3'>
-          <img src={RestaurantsIcon} alt="logo" />
-        </div>
-        <div className='flex flex-row h-fit items-center gap-x-6'>
-          <div className='flex flex-col h-fit'>
-            <p className='pop700 text-md'>Ufficio vendite</p>
-            <p className='pop700 text-md flex flex-row items-center gap-x-2'> <FaPhoneAlt color="black" size={20} /> 377 5673745 </p>
-          </div>
-          <button className='w-[120px] h-10 border-[3px] border-black items-center flex justify-center '>
-            <p className='pop500'>Accedi</p>
-          </button>
-          <button className='w-[180px] h-10 border-[3px] bg-[#00B27A] border-black items-center flex justify-center '>
-            <p className='pop500 text-white'>Demo Gratuita</p>
-          </button>
-        </div>
-      </div>
-
+<NavBar />
 
       <div className='flex flex-row sm:flex-col sm:mb-10'>
         <div className='w-1/2 sm:w-full text-left flex flex-col sm:items-center sm:p-5 p-20 gap-y-6'>
@@ -235,46 +183,7 @@ function App() {
       </div>
 
 
-      <div className='flex flex-col items-center py-8 bg-[#00B27A] -mt-8'>
-        <div className='flex flex-row sm:flex-col items-center '>
-          <div className='flex flex-col w-1/4 sm:w-full py-10 sm:py-5 sm:pl-5 pl-10 gap-y-10 sm:order-last'>
-            <div className='w-[80%]'>
-              <img src={RestaurantsIcon2} alt="logo" />
-            </div>
-            <p className='text-white text-xl sm:text-lg pop500'>Restaurants Club è una SaaS di AiGot S.r.l.
-              Sede Legale: Via Visconti di Modrone 38 - 20122 Milano
-              Sede Operativa: Via Oberdan 14 -
-              56127 Pisa</p>
-          </div>
-          <div className='flex flex-col w-1/4 sm:w-full py-10 pl-10 gap-y-5'>
-            <p className='text-white pop700 text-2xl'>Prodotto e Risorse</p>
-            <p className='text-white pop500 text-lg'>Il Prodotto</p>
-            <p className='text-white pop500 text-lg'>Prezzi</p>
-            <p className='text-white pop500 text-lg'>Academy</p>
-            <p className='text-white pop500 text-lg'>FAQ</p>
-            <p className='text-white pop500 text-lg'>Scopri quanto sei digitale</p>
-          </div>
-          <div className='flex flex-col w-1/4 sm:w-full py-10 pl-10 gap-y-5'>
-            <p className='text-white pop700 text-2xl'>Assistenza</p>
-            <p className='text-white pop500 text-lg'>Parla con l’assistenza</p>
-            <p className='text-white pop500 text-lg'>Richiedi una demo gratuita</p>
-            <p className='text-white pop500 text-lg'>Richiedi una consulenza gratuita</p>
-            <p className='text-white pop500 text-lg'>Privacy Policy</p>
-            <p className='text-white pop500 text-lg'>Terms and Conditions</p>
-          </div>
-          <div className='flex flex-col w-1/4 sm:w-full sm:-order-1 py-10 pl-10 gap-y-5'>
-            <div className='flex flex-col h-fit'>
-              <p className='pop700 text-3xl text-white'>Ufficio vendite</p>
-              <p className='pop700 text-3xl flex flex-row items-center gap-x-2 text-white'> <FaPhoneAlt color="white" size={20} /> 377 5673745 </p>
-            </div>
-            <p className='text-white pop500 text-lg'>Disponibile dal Lunedì al Venerdì</p>
-            <p className='text-white pop500 text-lg'>Dalle ore 10:00 alle ore 19:00</p>
-            <p className='text-white pop500 text-lg'>info@restaurants.club</p>
-          </div>
-        </div>
-        <p className='text-white pop500 text-lg my-6 sm:my-3 sm:text-sm sm:p-4'>Codice fiscale, P. IVA: 11498080966 - Capitale Sociale: 110.000€ © 2022 AiGot SRL, tutti i diritti riservati</p>
-
-      </div>
+      <Footer />
 
     </div>
   );
